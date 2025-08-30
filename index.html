@@ -68,7 +68,6 @@
 </head>
 <body>
 
-<!-- Tela inicial -->
 <div id="introScreen">
   <h1>🎉 Feliz Aniversário, Minha princesa! 🎉</h1>
   <button id="enterBtn">Entrar</button>
@@ -87,12 +86,10 @@
   }
 </script>
 
-<!-- Música -->
 <div class="music-player">
   <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0tgVpDi06FyKpA1z0VMD4v?utm_source=generator" width="40%" height="120" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 </div>
 
-<!-- Parabéns -->
 <header>
   <h1>Feliz Aniversário, Minha Garotinha</h1>
   <p>Hoje você faz dezoito anos, e eu fico pensando em como sou sortudo por ter você na minha vida. Cada segundo ao seu lado, cada risada, cada conversa meio estranha, cada abraço apertado, cada olhar, tudo isso faz dos meus dias melhores, mais alegres e cheios de amor.</p>
@@ -106,12 +103,11 @@
   <p>Com todo meu amor, </p> <b>Antônio Neto</b>
 </header>
 
-<!-- Álbum -->
 <section class="gallery-book">
   <h2>Álbum</h2>
   <div id="bookContainer">
     <div class="book" id="book">
-      <div class="page" id="currentPage"><img src="IMG-20250616-WA0018.jpg" alt="Foto"></div>
+      <div class="page" id="currentPage"><img src="fotos/IMG-20250616-WA0018.jpg" alt="Foto"></div>
       <div class="page" id="nextPage" style="transform: rotateY(180deg);"></div>
       <div class="arrow arrow-left">◀</div>
       <div class="arrow arrow-right">▶</div>
@@ -119,7 +115,6 @@
   </div>
 </section>
 
-<!-- Contador -->
 <section class="timeline">
   <h2>Eu te amo há </h2>
   <div id="contador" class="contador"></div>
@@ -157,13 +152,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Álbum
   const fotos = [
-    "IMG-20250616-WA0018.jpg",
-    "IMG-20250616-WA0019.jpg",
-    "IMG-20250616-WA0020.jpg",
-    "IMG-20250616-WA0022.jpg",
-    "IMG-20250624-WA0058.jpg",
-    "IMG-20250627-WA0177.jpg",
-    "IMG-20250628-WA0021.jpg",
+    "fotos/IMG-20250616-WA0018.jpg",
+    "fotos/IMG-20250616-WA0019.jpg",
+    "fotos/IMG-20250616-WA0020.jpg",
+    "fotos/IMG-20250616-WA0022.jpg",
+    "fotos/IMG-20250624-WA0058.jpg",
+    "fotos/IMG-20250627-WA0177.jpg",
+    "fotos/IMG-20250628-WA0021.jpg",
     "fotos/IMG-20250628-WA0027.jpg",
     "fotos/IMG-20250628-WA0120.jpg",
     "fotos/IMG-20250628-WA0280.jpg",
@@ -189,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function updateBook(){
     currentPage.querySelector("img").src=fotos[currentIndex];
     if(currentIndex+1<fotos.length) 
-      nextPage.innerHTML=`<img src="${fotos[currentIndex+1]}" alt="Foto">`;
+      nextPage.innerHTML=`<img src="${fotos[currentIndex+1]}" alt="foto">`;
     else 
       nextPage.innerHTML="";
   }
